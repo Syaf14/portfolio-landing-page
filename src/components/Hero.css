@@ -1,0 +1,79 @@
+.hero {
+  background: linear-gradient(135deg, #128397 0%,#2325a1 20%, #030553 60%);
+  color: white;
+  align-content: center;
+  height: 90vh;
+}
+
+.hero-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.cta-button {
+  background-color: #05076b;
+  width: 150px;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+.cta-button:hover {
+  background-color: #2325a1;
+  transform: scale(1.05);
+}
+
+h1 {
+  font-size: 80px;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 24px;
+  margin-bottom: 0.5rem;
+}
+
+/* Image takes 5 columns */
+.hero-img {
+    grid-column: span 5;
+    display: flex;
+    justify-content: center;
+}
+
+/* Square image card */
+.hero-img img {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.hero-title {
+  font-size: 2.2rem;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.hero-name {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-left: 6px;
+}
+
+.hero-desc {
+  font-size: 1rem;
+  margin-top: 1rem;
+  max-width: 600px;
+}
+

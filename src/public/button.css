@@ -1,0 +1,17 @@
+.pill-button {
+  padding: 15px 60px;      /* vertical | horizontal */
+  border-radius: 50px;     /* full radius */
+  border: none;
+  background-color: #4f46e5;  /* Indigo 600 */
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;      /* prevent text wrap */
+}
+
+.pill-button:hover {
+  background-color: #6366f1; /* slightly lighter on hover */
+  transform: scale(1.05);
+}

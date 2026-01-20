@@ -1,0 +1,76 @@
+.about-me {
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #f9f9f9;
+    color: #202A66;
+}
+
+.about-me h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #202A66;
+}
+
+.about-me-content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 50px;
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+    align-items: center;
+}
+
+/* Image takes 5 columns */
+.about-me-img {
+    grid-column: span 5;
+    display: flex;
+    justify-content: center;
+}
+
+/* Square image card */
+.about-me-img img {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Text takes 7 columns */
+.about-me-text {
+    grid-column: span 7;
+}
+
+.about-me-text h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about-me-text p {
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #202A66;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .about-me-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-me-img,
+    .about-me-text {
+        grid-column: span 12;
+    }
+
+    .about-me-text p {
+        text-align: left;
+    }
+}
+
