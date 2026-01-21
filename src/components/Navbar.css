@@ -27,18 +27,30 @@
 }
 
 /* Mobile adjustments */
+/* Mobile adjustments for smaller spacing */
 @media (max-width: 992px) {
-  .nav-link {
-    margin: 10px 0;
-  }
 
+  /* Collapse container background & padding */
   .navbar-collapse {
-    background-color: #11507a; /* background for mobile collapsed menu */
+    background-color: #11507a; /* keep your mobile bg */
     border-radius: 10px;
-    padding: 10px;
+    padding: 5px 10px; /* reduce padding */
   }
 
-  .navbar-nav {
-    width: 100%;
+  /* Reduce spacing between nav items */
+  .navbar-nav .nav-item {
+    margin: 5px 0 !important; /* less vertical gap */
+  }
+
+  /* Reduce nav-link padding */
+  .navbar-nav .nav-link {
+    padding: 5px 0 !important; 
+    font-size: 0.95rem; /* optional: slightly smaller text */
+  }
+
+  /* Hamburger icon closer to brand */
+  .navbar-toggler {
+    margin: 0;
+    padding: 0.25rem 0.5rem;
   }
 }
