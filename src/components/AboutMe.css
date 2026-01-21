@@ -60,17 +60,33 @@
 }
 
 @media (max-width: 768px) {
-    .about-me-content {
-        grid-template-columns: 1fr;
-    }
 
-    .about-me-img,
-    .about-me-text {
-        grid-column: span 12;
-    }
+  .about-me {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
 
-    .about-me-text p {
-        text-align: left;
-    }
+  .about-me-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .about-me-img img {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  .about-me-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .about-me-text p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
 }
+
 

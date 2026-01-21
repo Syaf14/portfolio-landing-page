@@ -1,0 +1,32 @@
+@media (max-width: 768px) {
+
+  .my-software-body {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  /* Keep row horizontal */
+  .my-software-body .row {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  /* Each card shrinks */
+  .my-software-body .card.col-md-3 {
+    width: 32%;
+    padding: 0;
+  }
+
+  /* Reduce title size */
+  .my-software-body h6 {
+    font-size: 0.75rem;
+    padding: 0.5rem !important;
+  }
+
+  /* Smaller images */
+  .software-logo {
+    max-width: 70px;
+    margin: 0 auto;
+  }
+
+}
