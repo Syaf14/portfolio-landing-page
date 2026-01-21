@@ -9,7 +9,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="hero">
+    <section className="hero" id="hero">
       <div className="hero-content container">
         <div className="row align-items-center flex-column-reverse flex-md-row">
 

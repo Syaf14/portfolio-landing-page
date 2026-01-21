@@ -39,7 +39,7 @@
 
   /* Reduce spacing between nav items */
   .navbar-nav .nav-item {
-    margin: 5px 0 !important; /* less vertical gap */
+    margin: 1px 0 !important; /* less vertical gap */
   }
 
   /* Reduce nav-link padding */
