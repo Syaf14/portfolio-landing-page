@@ -1,0 +1,17 @@
+.submit-btn {
+    background-color: #1d64af;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.submit-btn:hover {
+    background-color: #023b77;
+}
+.card-body label {
+    color: #202A66;
+    margin-bottom: 5px;
+}
