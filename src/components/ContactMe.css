@@ -41,13 +41,17 @@
     width: 100%;
   }
 
+  #contact-me .col-md-4 {
+    margin-left: 10px;
+  }
+
   #contact-me label {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   #contact-me input,
   #contact-me textarea {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   #contact-me .submit-btn {

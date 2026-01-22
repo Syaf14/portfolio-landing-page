@@ -27,7 +27,7 @@ function AboutMe() {
                     <div className='row'>
                         <label className='label-text col-md-3 fs-5 fw-bolder'>Email:</label>
                         <p className='col-md-1 fw-bolder'>:</p>
-                        <p className='p-text col-md-8 fs-5 fst-italic'>syafaiman0135@gmail.com</p>
+                        <p className='p-text-email col-md-8 fs-5 fst-italic'>syafaiman0135@gmail.com</p>
                     </div>
                     <div className='row'>
                         <label className='label-text col-md-3 fs-5 fw-bolder'>Address:</label>
