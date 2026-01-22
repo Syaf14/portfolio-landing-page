@@ -3,7 +3,14 @@ import './MyStatistic.css'
 function MyStatistic() {
     return (
         <div className="px-5 py-5 text-white" style={{background:'#202A66'}}>
-            <h2 className="text-center mb-5 fw-bolder">Statistics</h2>
+            <h2 className="text-center fw-bolder">Statistics</h2>
+            <div className='w-100 mb-4'>
+                <span className='stat-desc'>
+                    Here are some of my personal statistics that I have achieved so far in my career as a developer. 
+                    The project are included freelance and full time job. However the followers are based on social media platform. Team are the people 
+                    that I have worked with in my projects not including company colleagues.
+                </span>                
+            </div>
             <div className='row'>
                 <div className='col-md-4'>
                     <div className='card text-center bg-transparent border-0'>
@@ -11,7 +18,7 @@ function MyStatistic() {
                             <h3 className='text-white'>Projects</h3>
                         </div>
                         <div className='card-body'>
-                            <h1 className='text-white' style={{fontSize:'60px', fontWeight:'bold'}}>50+</h1>
+                            <h1 className='text-white' style={{fontSize:'60px', fontWeight:'bold'}}>10+</h1>
                         </div>
                     </div>
                 </div>
@@ -21,7 +28,7 @@ function MyStatistic() {
                             <h3 className='text-white'>Followers</h3>
                         </div>
                         <div className='card-body'>
-                            <h1 className='text-white' style={{fontSize:'60px', fontWeight:'bold'}}>100K+</h1>
+                            <h1 className='text-white' style={{fontSize:'60px', fontWeight:'bold'}}>100+</h1>
                         </div>
                     </div>
                 </div>
@@ -31,7 +38,7 @@ function MyStatistic() {
                             <h3 className='text-white'>Team</h3>
                         </div>
                         <div className='card-body'>
-                            <h1 className='text-white' style={{fontSize:'60px', fontWeight:'bold'}}>10</h1>
+                            <h1 className='text-white' style={{fontSize:'60px', fontWeight:'bold'}}>5</h1>
                         </div>
                     </div>
                 </div>

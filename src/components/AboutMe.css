@@ -13,6 +13,12 @@
     text-align: center;
     color: #202A66;
 }
+.about-me .header-about-me {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #202A66;
+}
 
 .about-me-content {
     display: grid;
@@ -44,6 +50,7 @@
 /* Text takes 7 columns */
 .about-me-text {
     grid-column: span 7;
+    height: 400px;
 }
 
 .about-me-text h2 {
@@ -51,42 +58,75 @@
     margin-bottom: 20px;
 }
 
-.about-me-text p {
+.about-me-text .statement-about-me{
     text-align: justify;
-    font-size: 16px;
+    font-size: 12px;
     line-height: 1.8;
     color: #202A66;
-    margin-bottom: 15px;
+    margin-bottom: 15px; 
 }
 
 @media (max-width: 768px) {
 
   .about-me {
     padding: 2rem 1rem;
-    text-align: center;
+    text-align: center; /* center all text */
   }
 
   .about-me-content {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 2rem; /* add more breathing space */
+    align-items: center;
   }
 
   .about-me-img img {
-    width: 100%;
+    width: 80%;        /* slightly smaller for mobile */
     max-width: 250px;
     margin: 0 auto;
   }
 
-  .about-me-text h2 {
-    font-size: 1.4rem;
+  .about-me-text {
+    grid-column: span 12;  /* full width */
+    height: auto;          /* allow text to expand */
   }
 
-  .about-me-text p {
+  .about-me-text h2 {
+    font-size: 1.5rem;
+    text-align: center;    /* center the name on mobile */
+    margin-bottom: 15px;
+  }
+
+  .about-me-text .statement-about-me {
     font-size: 0.95rem;
     line-height: 1.6;
+    text-align: center;    /* center the paragraph for mobile */
+    margin-bottom: 20px;
   }
 
+  /* Contact info rows */
+  .about-me-text .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .about-me-text .row label,
+  .about-me-text .row p {
+    flex: 1 1 100%;   /* each item takes full width */
+    margin: 2px 0;
+  }
+
+  .about-me-text .row p{
+    text-align: left;  /* align text to left for readability */
+
+  }
+
+  .about-me-text .row p.col-md-1 {
+    display: none; /* remove the colon on mobile */
+  }
 }
+
 
 

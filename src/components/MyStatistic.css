@@ -1,4 +1,8 @@
 @media (max-width: 768px) {
+  .stat-desc {
+      text-align: justify;
+      font-size: 0.9rem;
+  }
 
   /* Force the row to stay in one line */
   .row {
@@ -32,3 +36,8 @@
   }
 
 }
+
+.stat-desc {
+    text-align: center;
+}
+
