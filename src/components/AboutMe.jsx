@@ -12,7 +12,7 @@ function AboutMe() {
                 <div className="about-me-text">
                     <h2 className='header-about-me'>Wan Mohammad Syafrul Aiman | 24</h2>
                     <p className='statement-about-me'>
-                        I’m a full-time developer at <span className='fw-bold fst-italic m-0 p-0' style={{fontSize:"12px"}}>OpenSoft Technologies Sdn Bhd</span> and 
+                        I’m a full-time developer at <span className='comp-text fw-bold fst-italic m-0 p-0' style={{fontSize:"12px"}}>OpenSoft Technologies Sdn Bhd</span> and 
                         a freelance landing page specialist. I enjoy combining logic and creativity
                         to transform ideas into functional, visually appealing products.
                         <br/>

@@ -11,6 +11,14 @@
 .submit-btn:hover {
     background-color: #023b77;
 }
+
+.card{
+  transition: all 0.5s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
 .card-body label {
     color: #202A66;
     margin-bottom: 5px;

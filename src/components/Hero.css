@@ -19,11 +19,19 @@
   font-size: 2.2rem;
   line-height: 1.2;
   font-weight: 500;
+  cursor: default;
 }
 
 .hero-name {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 700;
+  transition: all 0.4s ease;
+  cursor:default;
+}
+
+.hero-name:hover{
+  font-size: 3.5rem;
+
 }
 
 h1 {
@@ -34,6 +42,7 @@ p, .hero-desc {
   font-size: 1rem;
   margin-top: 1rem;
   max-width: 600px;
+  cursor: default;
 }
 
 /* CTA BUTTON */
@@ -55,6 +64,17 @@ p, .hero-desc {
   transform: scale(1.05);
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 /* HERO IMAGE */
 .hero-img {
   display: flex;
@@ -67,6 +87,7 @@ p, .hero-desc {
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 20px;
+  animation: fadeInUp 2.5s ease-out forwards;
 }
 
 /* RESPONSIVE STYLING */

@@ -18,7 +18,7 @@ function MyStatistic() {
                             <h3 className='text-white'>Projects</h3>
                         </div>
                         <div className='card-body'>
-                            <h1 className='text-white' style={{fontSize:'60px', fontWeight:'bold'}}>10+</h1>
+                            <h1 className='text-white'>10+</h1>
                         </div>
                     </div>
                 </div>
@@ -28,7 +28,7 @@ function MyStatistic() {
                             <h3 className='text-white'>Followers</h3>
                         </div>
                         <div className='card-body'>
-                            <h1 className='text-white' style={{fontSize:'60px', fontWeight:'bold'}}>100+</h1>
+                            <h1 className='text-white'>100+</h1>
                         </div>
                     </div>
                 </div>
@@ -38,7 +38,7 @@ function MyStatistic() {
                             <h3 className='text-white'>Team</h3>
                         </div>
                         <div className='card-body'>
-                            <h1 className='text-white' style={{fontSize:'60px', fontWeight:'bold'}}>5</h1>
+                            <h1 className='text-white'>5</h1>
                         </div>
                     </div>
                 </div>

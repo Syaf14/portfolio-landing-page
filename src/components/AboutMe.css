@@ -60,10 +60,23 @@
 
 .about-me-text .statement-about-me{
     text-align: justify;
-    font-size: 12px;
-    line-height: 1.8;
+    font-size: 15px;
+    line-height: 1.3;
     color: #202A66;
     margin-bottom: 15px; 
+}
+
+.p-text,
+.p-text-email,
+.comp-text {
+  cursor: default;
+  transition: all 0.5s ease;
+}
+
+.p-text:hover,
+.p-text-email:hover,
+.comp-text:hover{
+  transform: scale(1.05);
 }
 
 @media (max-width: 768px) {

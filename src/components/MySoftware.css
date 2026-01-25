@@ -1,3 +1,12 @@
+.card-body img{
+  transition: all 0.5s ease;
+  cursor: default;
+}
+
+.card-body img:hover{
+  transform: scale(1.15);
+}
+
 @media (max-width: 768px) {
 
   .my-software-body {
