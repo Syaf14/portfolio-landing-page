@@ -24,6 +24,12 @@
     margin-bottom: 5px;
 }
 
+  #contact-me .col-md-6,
+  #contact-me .col-md-4,
+  #contact-me .col-md-8 {
+    margin-bottom: 5px;
+  }
+
 @media (max-width: 768px) {
 
   #contact-me {
@@ -47,6 +53,10 @@
   #contact-me .col-md-4,
   #contact-me .col-md-8 {
     width: 100%;
+  }
+
+  #contact-me .email-context{
+    margin-bottom: 1rem;
   }
 
   #contact-me .col-md-4 {

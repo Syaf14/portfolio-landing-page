@@ -36,26 +36,26 @@ function ContactMe() {
                     <div className='card-body bg-light'>
                         <form ref={form} onSubmit={sendEmail}>
                             <div className='row'>
-                                <div className='col-md-6 mb-3'>
+                                <div className='col-md-6'>
                                     <label className='fw-semibold fst-italic'>Full name :</label>
                                     <input type="text" name='name' className='form-control' placeholder='Enter your Name'/>
                                 </div>
-                                <div className='col-md-6 mb-3'>
+                                <div className='col-md-6'>
                                     <label className='fw-semibold fst-italic'>Email :</label>
                                     <input type="email" name='email' className='form-control' placeholder='example@gmail.com'/>
                                 </div>
                             </div>
-                            <div className='row mb-3'>
-                                <div className='col-md-4 mb-3'>
+                            <div className='row'>
+                                <div className='col-md-4'>
                                     <label className='fw-semibold fst-italic'>Phone No :</label>
                                     <input type="text" name='phone_no' className='form-control' placeholder='+6012-345 6789'/>
                                 </div>
-                                <div className='col-md-8 mb-3'>
+                                <div className='col-md-8'>
                                     <label className='fw-semibold fst-italic'>Email Subject :</label>
                                     <input type="text" name='subject' className='form-control' placeholder='Enter your Email Subject'/>
                                 </div>                                
                             </div>                            
-                            <div className='mb-3'>
+                            <div className='email-context'>
                                 <label className='fw-semibold fst-italic'>Email Context :</label>
                                 <textarea className='form-control' name='message' rows="4" placeholder='Enter your Message'></textarea>
                             </div>

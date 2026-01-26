@@ -93,7 +93,7 @@ p, .hero-desc {
 /* RESPONSIVE STYLING */
 @media (max-width: 768px) {
   .hero {
-    height: auto;
+    height: 600px;
     padding: 40px 20px;
     text-align: center;
   }

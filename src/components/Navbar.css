@@ -26,6 +26,21 @@
   text-decoration: none;
 }
 
+.btn-navbar {
+  text-align: center;
+  background: #204855;
+  padding: 10px 60px;
+  margin: 0 5px;
+  border-radius: 20px;
+  border: 0;
+  color: white;
+  transition: all 0.5s ease;
+}
+
+.btn-navbar:hover{
+  transform: scale(1.1);
+}
+
 /* Mobile adjustments */
 /* Mobile adjustments for smaller spacing */
 @media (max-width: 992px) {
@@ -46,6 +61,22 @@
   .navbar-nav .nav-link {
     padding: 5px 0 !important; 
     font-size: 0.95rem; /* optional: slightly smaller text */
+  }
+
+  .navbar-nav .btn-navbar {
+    text-align: center;
+    background: #204855;
+    padding: 5px 40px;
+    margin: 1px 0;
+    border-radius: 20px;
+    border: 0;
+    color: white;
+    transition: all 0.5s ease;
+    font-size: 0.95rem;
+  }
+
+  .navbar-nav .btn-navbar:hover{
+    transform: scale(1.1);
   }
 
   /* Hamburger icon closer to brand */

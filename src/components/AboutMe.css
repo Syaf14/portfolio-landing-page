@@ -94,7 +94,7 @@
   }
 
   .about-me-img img {
-    width: 80%;        /* slightly smaller for mobile */
+    width: 70%;        /* slightly smaller for mobile */
     max-width: 250px;
     margin: 0 auto;
   }
@@ -104,16 +104,16 @@
     height: auto;          /* allow text to expand */
   }
 
-  .about-me-text h2 {
-    font-size: 1.5rem;
+  .about-me-text .header-about-me {
+    font-size: 1.2rem;
     text-align: center;    /* center the name on mobile */
     margin-bottom: 15px;
   }
 
   .about-me-text .statement-about-me {
-    font-size: 0.95rem;
+    font-size: 0.75rem;
     line-height: 1.6;
-    text-align: center;    /* center the paragraph for mobile */
+    text-align: justify;    /* center the paragraph for mobile */
     margin-bottom: 20px;
   }
 
@@ -125,22 +125,19 @@
     margin-bottom: 10px;
   }
 
-  .about-me-text .row label,
-  .about-me-text .row p {
+  .about-me-text .row .label-text,
+  .about-me-text .row p,
+  .about-me-text .row .p-text {
+    font-size: 0.75rem;
     flex: 1 1 60%;   /* each item takes full width */
     margin: 0;
   }
 
-  .about-me-text .row label {
+  .about-me-text .row .label-text {
     text-align: left;  /* align labels to right */
-  }
-
-  .about-me-text .row .p-text-email {
-    word-break: break-all; /* allow email to break on small screens */
   }
   .about-me-text .row p{
     text-align: left;  /* align text to left for readability */
-
   }
 
   .about-me-text .row p.col-md-1 {

@@ -55,10 +55,8 @@ function Navbar() {
                   My Skill
                 </button>
               </li>
-              <li className="nav-item">
-                <button className="nav-link btn text-white" onClick={scrollToContact}>
-                  Contact
-                </button>
+              <li className='nav-item'>
+                <button className='btn-navbar' onClick={scrollToContact}>Hire Me</button>
               </li>
             </ul>
           </div>

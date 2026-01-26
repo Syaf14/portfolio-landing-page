@@ -20,24 +20,24 @@ function AboutMe() {
                         new technologies and improving my skills to deliver modern, responsive, and efficient solutions.
                     </p>
                     <div className='row'>
-                        <label className='label-text col-md-3 fs-5 fw-bolder'>Phone No:</label>
+                        <label className='label-text col-md-3 fw-bolder'>Phone No:</label>
                         <p className='col-md-1 fw-bolder'>:</p>
-                        <p className='p-text col-md-8 fs-5 fst-italic'>+6017-289 2440</p>
+                        <p className='p-text col-md-8 fst-italic'>+6017-289 2440</p>
                     </div>
                     <div className='row'>
-                        <label className='label-text col-md-3 fs-5 fw-bolder'>Email:</label>
+                        <label className='label-text col-md-3 fw-bolder'>Email:</label>
                         <p className='col-md-1 fw-bolder'>:</p>
-                        <p className='p-text-email col-md-8 fs-5 fst-italic'>syafaiman0135@gmail.com</p>
+                        <p className='p-text-email col-md-8 fst-italic'>syafaiman0135@gmail.com</p>
                     </div>
                     <div className='row'>
-                        <label className='label-text col-md-3 fs-5 fw-bolder'>Address:</label>
+                        <label className='label-text col-md-3 fw-bolder'>Address:</label>
                         <p className='col-md-1 fw-bolder'>:</p>
-                        <p className='p-text col-md-8 fs-5 fst-italic'>Sungai Ramal, Kajang, Selangor</p>
+                        <p className='p-text col-md-8 fst-italic'>Sungai Ramal, Kajang, Selangor</p>
                     </div>
                     <div className='row'>
-                        <label className='label-text col-md-3 fs-5 fw-bolder'>Country:</label>
+                        <label className='label-text col-md-3 fw-bolder'>Country:</label>
                         <p className='col-md-1 fw-bolder'>:</p>
-                        <p className='p-text col-md-8 fs-5 fst-italic'>Malaysia</p>
+                        <p className='p-text col-md-8 fst-italic'>Malaysia</p>
                     </div>
                 </div>
             </div>
