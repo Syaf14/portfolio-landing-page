@@ -1,7 +1,7 @@
 import './Navbar.css';
 
 function Navbar() {
-    const scrollToTop = () => {
+    const scrollToHome = () => {
     document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' });
   };
   const scrollToAboutMe = () => {
@@ -41,7 +41,7 @@ function Navbar() {
           <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
             <ul className="navbar-nav mb-2 mb-lg-0 text-center text-lg-end">
               <li className="nav-item">
-                <button className="nav-link btn text-white" onclick={scrollToTop}>
+                <button className="nav-link btn text-white" onclick={scrollToHome}>
                   Home
                 </button>
               </li>
