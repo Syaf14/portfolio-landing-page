@@ -1,7 +1,7 @@
 .navbar-body {
-  background-color: #11507a; /* same as nav inline style */
+  background-color: transparent;
   width: 100%;
-  color: white;
+  color: black;
   position: sticky; /* navbar stays on top */
   top: 0;
   z-index: 1000;

@@ -10,7 +10,7 @@ function AboutMe() {
                 </div>
 
                 <div className="about-me-text">
-                    <h2 className='header-about-me'>Wan Mohammad Syafrul Aiman | 24</h2>
+                    {/* <h2 className='header-about-me'>Wan Mohammad Syafrul Aiman | 24</h2>
                     <p className='statement-about-me'>
                         I’m a full-time developer at <span className='comp-text fw-bold fst-italic m-0 p-0' style={{fontSize:"12px"}}>OpenSoft Technologies Sdn Bhd</span> and 
                         a freelance landing page specialist. I enjoy combining logic and creativity
@@ -38,6 +38,32 @@ function AboutMe() {
                         <label className='label-text col-md-3 fw-bolder'>Country:</label>
                         <p className='col-md-1 fw-bolder'>:</p>
                         <p className='p-text col-md-8 fst-italic'>Malaysia</p>
+                    </div> */}
+                    <div className='card mb-2 border-4'>
+                        <div className='card-body'>
+                            <label for='about_me_name'>Name:</label>
+                            <p>Wan Mohammad Syafrul Aiman Bin Wan Mohd Sanusi</p>
+                        </div>
+                    </div>
+                    <div className='card mb-2 border-4'>
+                        <div className='card-body'>
+                            <label for='about_me_name'>Age:</label>
+                            <p>24</p>
+                        </div>
+                    </div>
+                    <div className='card mb-2 border-4'>
+                        <div className='card-body'>
+                            <label for='about_me_name'>Occupation:</label>
+                            <p>Web developer</p>
+                        </div>
+                    </div>
+                    <div className='card mb-2 border-4'>
+                        <div className='card-body'>
+                            <label for='about_me_name'>Social Media:</label>
+                            <p><i className="bi bi-instagram"></i>/<i class="bi bi-threads"></i> aimansanusi14
+                             | <i class="bi bi-tiktok"></i> pell.co
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

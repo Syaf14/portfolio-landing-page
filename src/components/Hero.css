@@ -1,15 +1,16 @@
 /* HERO SECTION */
 .hero {
-  background: linear-gradient(135deg, #128397 0%, #2325a1 20%, #030553 60%);
+  background: linear-gradient(135deg, #141542 50%, #070844 50%);
   color: white;
-  display: flex;
-  align-items: center;
-  height: 90vh;
-  padding: 20px 0;
+  height: 100vh;
+  z-index: 0;
 }
 
 /* HERO CONTENT WRAPPER */
 .hero-content {
+  height: 100vh;
+  display: flex;
+  align-items: center;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -17,20 +18,21 @@
 /* HEADINGS */
 .hero-title {
   font-size: 2.2rem;
-  line-height: 1.2;
+  line-height: 0.5;
+  color: aqua;
   font-weight: 500;
   cursor: default;
 }
 
 .hero-name {
-  font-size: 3rem;
+  font-size: 7rem;
   font-weight: 700;
   transition: all 0.4s ease;
   cursor:default;
 }
 
 .hero-name:hover{
-  font-size: 3.5rem;
+  font-size: 7.5rem;
 
 }
 
@@ -39,7 +41,7 @@ h1 {
 }
 
 p, .hero-desc {
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin-top: 1rem;
   max-width: 600px;
   cursor: default;
@@ -47,9 +49,9 @@ p, .hero-desc {
 
 /* CTA BUTTON */
 .cta-button {
-  background-color: #1484ec;
+  background-color: #1ec8df;
   width: 150px;
-  color: white;
+  color: #022b69;
   padding: 15px 30px;
   border: none;
   border-radius: 40px;
@@ -60,7 +62,8 @@ p, .hero-desc {
 }
 
 .cta-button:hover {
-  background-color: #3134eb;
+  background-color: #047aa8;
+  color: white;
   transform: scale(1.05);
 }
 
@@ -78,7 +81,7 @@ p, .hero-desc {
 /* HERO IMAGE */
 .hero-img {
   display: flex;
-  justify-content: center;
+  justify-content: end;
 }
 
 .hero-img img {
@@ -122,3 +125,105 @@ p, .hero-desc {
     margin: 0 auto;
   }
 }
+
+.navbar-body {
+  background-color: transparent;
+  width: 100%;
+  color: black;
+  position: sticky; /* navbar stays on top */
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-text {
+  font-family: 'Arial Black', sans-serif;
+  letter-spacing: 2px;
+  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Nav links */
+.nav-link {
+  font-size: 1rem;
+  margin: 0 8px;
+  transition: all 0.5s ease;
+}
+
+.nav-link:hover {
+  color: #a0e1f5;
+  transform: scale(1.15);
+  text-decoration: none;
+}
+
+.btn-navbar {
+  text-align: center;
+  background: #204855;
+  padding: 10px 60px;
+  margin: 0 5px;
+  border-radius: 20px;
+  border: 0;
+  color: white;
+  transition: all 0.5s ease;
+}
+
+.btn-navbar:hover{
+  transform: scale(1.1);
+}
+
+#hero,
+#about-me,
+#my-skill,
+#contact-me {
+  scroll-margin-top: 90px; /* navbar height + a bit of spacing */
+}
+/* Mobile adjustments */
+/* Mobile adjustments for smaller spacing */
+@media (max-width: 992px) {
+
+  /* Collapse container background & padding */
+  .navbar-collapse {
+    background-color: #11507a; /* keep your mobile bg */
+    border-radius: 10px;
+    padding: 5px 10px; /* reduce padding */
+  }
+
+  /* Reduce spacing between nav items */
+  .navbar-nav .nav-item {
+    margin: 1px 0 !important; /* less vertical gap */
+  }
+
+  /* Reduce nav-link padding */
+  .navbar-nav .nav-link {
+    padding: 5px 0 !important; 
+    font-size: 0.95rem; /* optional: slightly smaller text */
+  }
+
+  .navbar-nav .btn-navbar {
+    text-align: center;
+    background: #204855;
+    padding: 5px 40px;
+    margin: 1px 0;
+    border-radius: 20px;
+    border: 0;
+    color: white;
+    transition: all 0.5s ease;
+    font-size: 0.95rem;
+  }
+
+  .navbar-nav .btn-navbar:hover{
+    transform: scale(1.1);
+  }
+
+  /* Hamburger icon closer to brand */
+  .navbar-toggler {
+    margin: 0;
+    padding: 0.25rem 0.5rem;
+  }
+
+  #hero,
+  #about-me,
+  #my-skill,
+  #contact-me {
+    scroll-margin-top: 90px; /* navbar height + a bit of spacing */
+  }
+}
+

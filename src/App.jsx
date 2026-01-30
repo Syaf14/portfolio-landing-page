@@ -14,7 +14,6 @@ import './App.css';
 function App() {
   return (
     <div>
-      <Navbar />
       <Hero />
       <AboutMe />
       {/* <Portfolio /> */}
