@@ -1,3 +1,13 @@
+.row .progress {
+  height: 30px;
+  width: 70%;
+  background-color: #141542;
+}
+
+.row .progress-bar{
+  background-color: aqua;
+}
+
 @media (max-width: 768px) {
 
   /* Reduce section padding */

@@ -7,42 +7,79 @@ function MySkill() {
             <div className='row'>
                 <div className='col-md-6'>
                     <div className='text-center mb-3'>
-                        <label className='text-white mb-3' style={{fontSize:'20px'}}>Laravel</label>
-                        <div className="progress" role="progressbar" style={{height: "20px"}}>
-                            <div className="progress-bar" style={{width:"75%"}}></div>
+                        <div className='card'>
+                            <div className='card-body'>
+                                <label className='mb-2' style={{fontSize:'20px'}}>Laravel</label>
+                                <div className="d-flex justify-content-center">
+                                    <div className="progress" role="progressbar">
+                                        <div className="progress-bar" style={{width:"75%"}}></div>
+                                    </div>                                    
+                                </div>
+                            </div>
+                        </div>   
+                    </div>
+                    <div className='text-center mb-3'>
+                        <div className='card'>
+                            <div className="card-body">
+                                <label className='mb-2' style={{fontSize:'20px'}}>ReactJS</label>
+                                <div className="d-flex justify-content-center">
+                                    <div className="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                        <div className="progress-bar" style={{width:"70%"}}></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className='text-center mb-3'>
-                        <label className='text-white mb-3' style={{fontSize:'20px'}}>ReactJS</label>
-                        <div className="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style={{height: "20px"}}>
-                            <div className="progress-bar" style={{width:"70%"}}></div>
-                        </div>
-                    </div>
-                    <div className='text-center mb-3'>
-                        <label className='text-white mb-3' style={{fontSize:'20px'}}>Figma</label>
-                        <div className="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style={{height: "20px"}}>
-                            <div className="progress-bar" style={{width:"50%"}}></div>
+                        <div className="card">
+                            <div className="card-body">
+                                <label className='mb-2' style={{fontSize:'20px'}}>Figma</label>
+                                <div className="d-flex justify-content-center">
+                                    <div className="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                        <div className="progress-bar" style={{width:"50%"}}></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div className='col-md-6'>
                     <div className='text-center mb-3'>
-                        <label className='text-white mb-3' style={{fontSize:'20px'}}>Adobe After Effect</label>
-                        <div className="progress" role="progressbar" style={{height: "20px"}}>
-                            <div className="progress-bar" style={{width:"50%"}}></div>
+                        <div className="card">
+                            <div className="card-body">
+                                <label className='mb-2' style={{fontSize:'20px'}}>Adobe After Effect</label>
+                                <div className="d-flex justify-content-center">
+                                    <div className="progress" role="progressbar">
+                                        <div className="progress-bar" style={{width:"50%"}}></div>
+                                    </div> 
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className='text-center mb-3'>
-                        <label className='text-white mb-3' style={{fontSize:'20px'}}>Adobe Photoshop</label>
-                        <div className="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style={{height: "20px"}}>
-                            <div className="progress-bar" style={{width:"65%"}}></div>
+                        <div className="card">
+                            <div className="card-body">
+                                <label className='mb-2' style={{fontSize:'20px'}}>Adobe Photoshop</label>
+                                <div className="d-flex justify-content-center">
+                                    <div className="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                        <div className="progress-bar" style={{width:"65%"}}></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className='text-center mb-3'>
-                        <label className='text-white mb-3' style={{fontSize:'20px'}}>Adobe Illustrator</label>
-                        <div className="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style={{height: "20px"}}>
-                            <div className="progress-bar" style={{width:"68%"}}></div>
+                        <div className="card">
+                            <div className="card-body">
+                                <label className='mb-2' style={{fontSize:'20px'}}>Adobe Illustrator</label>
+                                <div className="d-flex justify-content-center">
+                                    <div className="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                                        <div className="progress-bar" style={{width:"68%"}}></div>
+                                    </div> 
+                                </div>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>

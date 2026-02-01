@@ -3,6 +3,7 @@
     padding-right: 80px;
     padding-top: 40px;
     padding-bottom: 40px;
+    height: 90vh;
     background-color: #f9f9f9;
     color: #202A66;
 }
@@ -44,7 +45,12 @@
     aspect-ratio: 1 / 1;
     object-fit: cover;
     border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 30px 40px rgba(0, 0, 0, 0.25);
+    transition: all 0.5s ease;
+}
+
+.about-me-img img:hover {
+    transform: scale(1.05);
 }
 
 /* Text takes 7 columns */
@@ -60,11 +66,17 @@
 .about-me-text p{
   font-size: 1rem;
   margin-bottom: 0;
-  font-weight: bold
 }
 
 .about-me-text .card{
-  border-color: #7c8bdf;
+  color: white;
+  border-color: #141542;
+  background-color: #070844;
+}
+
+.about-me-text .card .card-body label{
+  color: rgb(142, 222, 247);
+  font-style: italic;
 }
 
 /* .about-me-text h2 {
@@ -98,6 +110,7 @@
   .about-me {
     padding: 2rem 1rem;
     text-align: center; /* center all text */
+    height: auto;
   }
 
   .about-me-content {
@@ -124,38 +137,30 @@
     margin-bottom: 15px;
   }
 
-  .about-me-text .statement-about-me {
+  .about-me-text {
+      grid-column: span 7;
+      height: 400px;
+  }
+
+  .about-me-text label{
+    margin-bottom: 0; 
+  }
+
+  .about-me-text .card p{
     font-size: 0.75rem;
-    line-height: 1.6;
-    text-align: justify;    /* center the paragraph for mobile */
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
 
-  /* Contact info rows */
-  .about-me-text .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 10px;
-  }
-
-  .about-me-text .row .label-text,
-  .about-me-text .row p,
-  .about-me-text .row .p-text {
+  .about-me-text .card{
     font-size: 0.75rem;
-    flex: 1 1 60%;   /* each item takes full width */
-    margin: 0;
+    color: white;
+    border-color: #141542;
+    background-color: #070844;
   }
 
-  .about-me-text .row .label-text {
-    text-align: left;  /* align labels to right */
-  }
-  .about-me-text .row p{
-    text-align: left;  /* align text to left for readability */
-  }
-
-  .about-me-text .row p.col-md-1 {
-    display: none; /* remove the colon on mobile */
+  .about-me-text .card .card-body label{
+    color: rgb(142, 222, 247);
+    font-style: italic;
   }
 }
 

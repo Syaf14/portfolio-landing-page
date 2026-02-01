@@ -17,9 +17,8 @@ function App() {
       <Hero />
       <AboutMe />
       {/* <Portfolio /> */}
-      <MyStatistic />
-      <MySoftware />
       <MySkill />
+      <MySoftware />
       <ContactMe />
       <Footer />
     </div>

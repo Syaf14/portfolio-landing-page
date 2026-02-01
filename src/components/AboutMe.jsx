@@ -9,7 +9,7 @@ function AboutMe() {
                     <img src="/images/owner-img.jpg" alt="About me" />
                 </div>
 
-                <div className="about-me-text">
+                <div className="about-me-text col-md-12">
                     {/* <h2 className='header-about-me'>Wan Mohammad Syafrul Aiman | 24</h2>
                     <p className='statement-about-me'>
                         I’m a full-time developer at <span className='comp-text fw-bold fst-italic m-0 p-0' style={{fontSize:"12px"}}>OpenSoft Technologies Sdn Bhd</span> and 
@@ -41,28 +41,39 @@ function AboutMe() {
                     </div> */}
                     <div className='card mb-2 border-4'>
                         <div className='card-body'>
-                            <label for='about_me_name'>Name:</label>
-                            <p>Wan Mohammad Syafrul Aiman Bin Wan Mohd Sanusi</p>
-                        </div>
-                    </div>
-                    <div className='card mb-2 border-4'>
-                        <div className='card-body'>
-                            <label for='about_me_name'>Age:</label>
-                            <p>24</p>
+                            <label for='about_me_name'>Name | Age:</label>
+                            <p>Wan Mohammad Syafrul Aiman Bin Wan Mohd Sanusi | 24</p>
                         </div>
                     </div>
                     <div className='card mb-2 border-4'>
                         <div className='card-body'>
                             <label for='about_me_name'>Occupation:</label>
-                            <p>Web developer</p>
+                            <p>Opensoft Technologies SDN BHD <br />
+                            - IT executive
+                            </p>
                         </div>
                     </div>
-                    <div className='card mb-2 border-4'>
+                    <div className='d-flex justify-content-between'>
+                    <div className='card mb-2 border-4 col-md-5'>
+                        <div className='card-body'>
+                            <label for='about_me_name'>Phone No:</label>
+                            <p>+6017 289 2440</p>
+                        </div>
+                    </div>
+                    <div className='card mb-2 border-4 col-md-6'>
                         <div className='card-body'>
                             <label for='about_me_name'>Social Media:</label>
                             <p><i className="bi bi-instagram"></i>/<i class="bi bi-threads"></i> aimansanusi14
-                             | <i class="bi bi-tiktok"></i> pell.co
+                            <br /><i class="bi bi-tiktok"></i> pell.co
                             </p>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div className='card mb-2 border-4'>
+                        <div className='card-body'>
+                            <label for='about_me_name'>Email:</label>
+                            <p>syafaiman0135@gmail.com</p>
                         </div>
                     </div>
                 </div>

@@ -96,9 +96,13 @@ p, .hero-desc {
 /* RESPONSIVE STYLING */
 @media (max-width: 768px) {
   .hero {
-    height: 600px;
-    padding: 40px 20px;
-    text-align: center;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .hero-content {
+    height: auto;
+    padding-top: 80px;
   }
 
   .hero-title {
@@ -119,10 +123,19 @@ p, .hero-desc {
     max-width: 250px;
   }
 
+  .hero-img {
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+  }
+
   .hero-img img {
-    max-width: 300px;
-    aspect-ratio: 1 / 1;
+    width: 100%;
+    max-width: 280px;
+    height: auto;
     margin: 0 auto;
+    transform: none; /* cancel animation offset */
+    animation: none;
   }
 }
 

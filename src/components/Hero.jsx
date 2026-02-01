@@ -68,7 +68,7 @@ const Hero = () => {
             </nav>
           </div>
           <div className="hero-content container">
-            <div className="row align-items-center w-100">
+            <div className="row align-items-center w-100 flex-column-reverse flex-md-row">
 
               {/* TEXT */}
               <div className="col-12 col-md-8 text-center text-md-start d-flex flex-column justify-content-center">
