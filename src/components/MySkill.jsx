@@ -12,7 +12,7 @@ function MySkill() {
                                 <label className='mb-2' style={{fontSize:'20px'}}>Laravel</label>
                                 <div className="d-flex justify-content-center">
                                     <div className="progress" role="progressbar">
-                                        <div className="progress-bar" style={{width:"75%"}}></div>
+                                        <div className="progress-bar" style={{width:"75%"}}>75%</div>
                                     </div>                                    
                                 </div>
                             </div>
@@ -24,7 +24,7 @@ function MySkill() {
                                 <label className='mb-2' style={{fontSize:'20px'}}>ReactJS</label>
                                 <div className="d-flex justify-content-center">
                                     <div className="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                        <div className="progress-bar" style={{width:"70%"}}></div>
+                                        <div className="progress-bar" style={{width:"70%"}}>70%</div>
                                     </div>
                                 </div>
                             </div>
@@ -36,7 +36,7 @@ function MySkill() {
                                 <label className='mb-2' style={{fontSize:'20px'}}>Figma</label>
                                 <div className="d-flex justify-content-center">
                                     <div className="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                        <div className="progress-bar" style={{width:"50%"}}></div>
+                                        <div className="progress-bar" style={{width:"50%"}}>50%</div>
                                     </div>
                                 </div>
                             </div>
@@ -50,7 +50,7 @@ function MySkill() {
                                 <label className='mb-2' style={{fontSize:'20px'}}>Adobe After Effect</label>
                                 <div className="d-flex justify-content-center">
                                     <div className="progress" role="progressbar">
-                                        <div className="progress-bar" style={{width:"50%"}}></div>
+                                        <div className="progress-bar" style={{width:"50%"}}>50%</div>
                                     </div> 
                                 </div>
                             </div>
@@ -62,7 +62,7 @@ function MySkill() {
                                 <label className='mb-2' style={{fontSize:'20px'}}>Adobe Photoshop</label>
                                 <div className="d-flex justify-content-center">
                                     <div className="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                        <div className="progress-bar" style={{width:"65%"}}></div>
+                                        <div className="progress-bar" style={{width:"65%"}}>65%</div>
                                     </div>
                                 </div>
                             </div>
@@ -74,7 +74,7 @@ function MySkill() {
                                 <label className='mb-2' style={{fontSize:'20px'}}>Adobe Illustrator</label>
                                 <div className="d-flex justify-content-center">
                                     <div className="progress" role="progressbar" aria-label="Example 20px high" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                        <div className="progress-bar" style={{width:"68%"}}></div>
+                                        <div className="progress-bar" style={{width:"68%"}}>68%</div>
                                     </div> 
                                 </div>
                             </div>

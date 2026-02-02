@@ -7,6 +7,31 @@
   transform: scale(1.15);
 }
 
+.my-software-body .card-body .software-logo-1{
+  opacity: 0;
+  transform: translateY(50px); /* moves image down initially */
+  transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+.my-software-body .card-body .software-logo-2{
+  opacity: 0;
+  transform: translateY(50px); /* moves image down initially */
+  transition: opacity 3s ease-out, transform 3s ease-out;
+}
+
+.my-software-body .card-body .software-logo-3{
+  opacity: 0;
+  transform: translateY(50px); /* moves image down initially */
+  transition: opacity 4s ease-out, transform 4s ease-out;
+}
+
+.my-software-body .card-body .software-logo-1.show,
+.my-software-body .card-body .software-logo-2.show,
+.my-software-body .card-body .software-logo-3.show{
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @media (max-width: 768px) {
 
   .my-software-body {

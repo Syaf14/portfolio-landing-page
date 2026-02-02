@@ -1,3 +1,7 @@
+#contact-me {
+  background: linear-gradient(#202A66 60%, #fff 40%);
+}
+
 .submit-btn {
     background-color: #1d64af;
     color: white;
@@ -24,11 +28,52 @@
     margin-bottom: 5px;
 }
 
-  #contact-me .col-md-6,
-  #contact-me .col-md-4,
-  #contact-me .col-md-8 {
-    margin-bottom: 5px;
+.card-body .row label,
+.card-body .email-context label{
+  color: white;
+}
+
+#contact-me .card-title{
+  padding: 10px;
+}
+
+  .row .col-md-6 .contact-me-text{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    line-height: 1;
   }
+
+  .row .col-md-6 .contact-me-text h1{
+    font-size: 3.6rem;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.35rem;
+  }
+
+  .row .col-md-6 .contact-me-img{
+    width: 300px;          /* besar untuk div */
+    height: 300px;         /* square */
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateX(50px); /* moves image down initially */
+    transition: opacity 2s ease-out, transform 2s ease-out;
+  }
+
+  .row .col-md-6 .contact-me-img.show{
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .row .col-md-6 .contact-me-img img{
+    width: 300px;          /* image kecil */
+    height: auto;
+    object-fit: contain;
+  }
+
 
 @media (max-width: 768px) {
 
@@ -48,11 +93,39 @@
   #contact-me .row {
     flex-direction: column;
   }
+  .row .col-md-6 .contact-me-text h1{
+    font-size: 1.4rem;
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.35rem;
+  }
 
-  #contact-me .col-md-6,
-  #contact-me .col-md-4,
-  #contact-me .col-md-8 {
-    width: 100%;
+    .row .col-md-6 .contact-me-text p{
+    font-size: 0.75rem;
+    letter-spacing: 0.15rem;
+  }
+
+  .row .col-md-6 .contact-me-img{
+    width: 300px;          /* besar untuk div */
+    height: 300px;         /* square */
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateX(50px); /* moves image down initially */
+    transition: opacity 2s ease-out, transform 2s ease-out;
+  }
+
+  .row .col-md-6 .contact-me-img.show{
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .row .col-md-6 .contact-me-img img{
+    width: 300px;          /* image kecil */
+    height: auto;
+    object-fit: contain;
   }
 
   #contact-me .email-context{
@@ -67,13 +140,31 @@
     font-size: 0.8rem;
   }
 
+  #contact-me h4{
+    font-size: 1rem;
+  }
+
+  #contact-me .card-title {
+    padding: 4px;
+  }
+
   #contact-me input,
   #contact-me textarea {
     font-size: 0.8rem;
   }
 
+  #contact-me .whatsapp-text{
+    font-size: 0.8rem;
+  }
+
   #contact-me .submit-btn {
+    font-size: 0.75rem;
     width: 100%;
+  }
+
+  .card-body .row label,
+  .card-body .email-context label{
+    color: white;
   }
 
 }

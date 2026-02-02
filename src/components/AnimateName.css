@@ -1,0 +1,56 @@
+.font-style-1 {
+  font-family: "Arial Black", sans-serif;
+}
+
+.font-style-2 {
+  font-family: "Georgia", serif;
+}
+
+.font-style-3 {
+  font-family: "Courier New", monospace;
+}
+
+.font-style-4 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.font-style-5 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.font-style-6 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.hero-name {
+  display: inline-flex;        /* prevents inline spacing jumps */
+  align-items: center;
+  justify-content: center;
+
+  width: 7.5ch;                /* lock width of "PELL.CO" */
+  height: 1.2em;               /* lock height */
+
+  margin: 0;                   /* hard reset */
+  padding: 0;
+
+  line-height: 1;              /* prevent vertical jumps */
+  letter-spacing: 0;
+
+  font-size: 7rem;
+  font-weight: 700;
+
+  transition: font-family 0.15s linear;
+}
+
+@media (max-width: 768px) {
+  .hero-name {
+    font-size: 2.5rem;
+
+    width: 7.5ch;     /* keep width locked */
+    height: 1.1em;
+
+    line-height: 1;
+    transition: font-family 0.1s linear; /* faster on mobile */
+  }
+}

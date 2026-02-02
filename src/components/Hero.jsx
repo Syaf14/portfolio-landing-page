@@ -1,5 +1,7 @@
 import React from 'react';
 import './Hero.css';
+import { Typewriter } from "react-simple-typewriter";
+import AnimateName from './AnimateName';
 
 const Hero = () => {
 
@@ -73,11 +75,23 @@ const Hero = () => {
               {/* TEXT */}
               <div className="col-12 col-md-8 text-center text-md-start d-flex flex-column justify-content-center">
                 <h1 className="hero-title">
-                  I’m <span className="hero-name">PELL.CO</span>,
+                  I’m <AnimateName />,
                 </h1>
 
                 <p className="hero-desc">
-                  Laravel and React developer.
+                  <Typewriter
+                    words={[
+                      "Laravel Developer",
+                      "React Developer",
+                      "Full Stack Developer",
+                    ]}
+                    loop={0}               // infinite
+                    cursor
+                    cursorStyle="|"
+                    typeSpeed={70}
+                    deleteSpeed={40}
+                    delaySpeed={1500}
+                  />
                 </p>
 
                 <div className="d-flex justify-content-center justify-content-md-start">

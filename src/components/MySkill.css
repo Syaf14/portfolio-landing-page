@@ -5,7 +5,7 @@
 }
 
 .row .progress-bar{
-  background-color: aqua;
+  background-color: #047aa8;
 }
 
 @media (max-width: 768px) {

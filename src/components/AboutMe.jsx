@@ -1,6 +1,28 @@
 import './AboutMe.css';
+import { useEffect } from 'react';
 
 function AboutMe() {
+    useEffect(() => {
+            const faders = document.querySelectorAll('.about-me-img,.card-about-me-1,.card-about-me-2,.card-about-me-3,.card-about-me-4,.card-about-me-5');
+
+            const appearOnScroll = () => {
+                faders.forEach(fader => {
+                    const rect = fader.getBoundingClientRect();
+                    if (rect.top < window.innerHeight - 50) {
+                        fader.classList.add('show');
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', appearOnScroll);
+            window.addEventListener('load', appearOnScroll);
+
+            // Cleanup listener when component unmounts
+            return () => {
+                window.removeEventListener('scroll', appearOnScroll);
+                window.removeEventListener('load', appearOnScroll);
+            };
+        }, []);
     return (
         <section className="about-me" id='about-me' >
             <h2 className='fw-bolder'>About Me</h2>
@@ -39,13 +61,13 @@ function AboutMe() {
                         <p className='col-md-1 fw-bolder'>:</p>
                         <p className='p-text col-md-8 fst-italic'>Malaysia</p>
                     </div> */}
-                    <div className='card mb-2 border-4'>
+                    <div className='card-about-me-1 card mb-2 border-4'>
                         <div className='card-body'>
                             <label for='about_me_name'>Name | Age:</label>
                             <p>Wan Mohammad Syafrul Aiman Bin Wan Mohd Sanusi | 24</p>
                         </div>
                     </div>
-                    <div className='card mb-2 border-4'>
+                    <div className='card-about-me-2 card mb-2 border-4'>
                         <div className='card-body'>
                             <label for='about_me_name'>Occupation:</label>
                             <p>Opensoft Technologies SDN BHD <br />
@@ -54,13 +76,13 @@ function AboutMe() {
                         </div>
                     </div>
                     <div className='d-flex justify-content-between'>
-                    <div className='card mb-2 border-4 col-md-5'>
+                    <div className='card-about-me-3 card mb-2 border-4 col-md-5'>
                         <div className='card-body'>
                             <label for='about_me_name'>Phone No:</label>
                             <p>+6017 289 2440</p>
                         </div>
                     </div>
-                    <div className='card mb-2 border-4 col-md-6'>
+                    <div className='card-about-me-4 card mb-2 border-4 col-md-6'>
                         <div className='card-body'>
                             <label for='about_me_name'>Social Media:</label>
                             <p><i className="bi bi-instagram"></i>/<i class="bi bi-threads"></i> aimansanusi14
@@ -70,7 +92,7 @@ function AboutMe() {
                     </div>
                     </div>
 
-                    <div className='card mb-2 border-4'>
+                    <div className='card-about-me-5 card mb-2 border-4'>
                         <div className='card-body'>
                             <label for='about_me_name'>Email:</label>
                             <p>syafaiman0135@gmail.com</p>
