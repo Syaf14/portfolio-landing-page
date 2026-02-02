@@ -55,7 +55,7 @@ function ContactMe() {
                                     <input type="text" name='subject' className='form-control' placeholder='Enter your Email Subject'/>
                                 </div>                                
                             </div>                            
-                            <div className='email-context'>
+                            <div className='email-context mb-3'>
                                 <label className='fw-semibold fst-italic'>Email Context :</label>
                                 <textarea className='form-control' name='message' rows="4" placeholder='Enter your Message'></textarea>
                             </div>
