@@ -2,106 +2,83 @@ import './AboutMe.css';
 import { useEffect } from 'react';
 
 function AboutMe() {
-    useEffect(() => {
-            const faders = document.querySelectorAll('.about-me-img,.card-about-me-1,.card-about-me-2,.card-about-me-3,.card-about-me-4,.card-about-me-5');
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.1 });
 
-            const appearOnScroll = () => {
-                faders.forEach(fader => {
-                    const rect = fader.getBoundingClientRect();
-                    if (rect.top < window.innerHeight - 50) {
-                        fader.classList.add('show');
-                    }
-                });
-            };
+    const faders = document.querySelectorAll('.fade-in-element');
+    faders.forEach(el => observer.observe(el));
 
-            window.addEventListener('scroll', appearOnScroll);
-            window.addEventListener('load', appearOnScroll);
+    return () => observer.disconnect();
+  }, []);
 
-            // Cleanup listener when component unmounts
-            return () => {
-                window.removeEventListener('scroll', appearOnScroll);
-                window.removeEventListener('load', appearOnScroll);
-            };
-        }, []);
-    return (
-        <section className="about-me" id='about-me' >
-            <h2 className='fw-bolder'>About Me</h2>
-            <div className="about-me-content">
-                <div className="about-me-img">
-                    <img src="/images/owner-img.jpg" alt="About me" />
-                </div>
+  return (
+    <section className="about-me" id='about-me'>
+      <div className="container">
+        <div className="section-header text-center fade-in-element">
+          <h2 className='fw-bold display-4'>About <span className="text-emerald">Me</span></h2>
+          <div className="header-line mx-auto"></div>
+        </div>
 
-                <div className="about-me-text col-md-12">
-                    {/* <h2 className='header-about-me'>Wan Mohammad Syafrul Aiman | 24</h2>
-                    <p className='statement-about-me'>
-                        I’m a full-time developer at <span className='comp-text fw-bold fst-italic m-0 p-0' style={{fontSize:"12px"}}>OpenSoft Technologies Sdn Bhd</span> and 
-                        a freelance landing page specialist. I enjoy combining logic and creativity
-                        to transform ideas into functional, visually appealing products.
-                        <br/>
-                        My experience spans web development, UI/UX design, and branding. I’m constantly learning
-                        new technologies and improving my skills to deliver modern, responsive, and efficient solutions.
-                    </p>
-                    <div className='row'>
-                        <label className='label-text col-md-3 fw-bolder'>Phone No:</label>
-                        <p className='col-md-1 fw-bolder'>:</p>
-                        <p className='p-text col-md-8 fst-italic'>+6017-289 2440</p>
-                    </div>
-                    <div className='row'>
-                        <label className='label-text col-md-3 fw-bolder'>Email:</label>
-                        <p className='col-md-1 fw-bolder'>:</p>
-                        <p className='p-text-email col-md-8 fst-italic'>syafaiman0135@gmail.com</p>
-                    </div>
-                    <div className='row'>
-                        <label className='label-text col-md-3 fw-bolder'>Address:</label>
-                        <p className='col-md-1 fw-bolder'>:</p>
-                        <p className='p-text col-md-8 fst-italic'>Sungai Ramal, Kajang, Selangor</p>
-                    </div>
-                    <div className='row'>
-                        <label className='label-text col-md-3 fw-bolder'>Country:</label>
-                        <p className='col-md-1 fw-bolder'>:</p>
-                        <p className='p-text col-md-8 fst-italic'>Malaysia</p>
-                    </div> */}
-                    <div className='card-about-me-1 card mb-2 border-4'>
-                        <div className='card-body'>
-                            <label for='about_me_name'>Name | Age:</label>
-                            <p>Wan Mohammad Syafrul Aiman Bin Wan Mohd Sanusi | 24</p>
-                        </div>
-                    </div>
-                    <div className='card-about-me-2 card mb-2 border-4'>
-                        <div className='card-body'>
-                            <label for='about_me_name'>Occupation:</label>
-                            <p>Opensoft Technologies SDN BHD <br />
-                            - IT executive
-                            </p>
-                        </div>
-                    </div>
-                    <div className='d-flex justify-content-between'>
-                    <div className='card-about-me-3 card mb-2 border-4 col-md-5'>
-                        <div className='card-body'>
-                            <label for='about_me_name'>Phone No:</label>
-                            <p>+6017 289 2440</p>
-                        </div>
-                    </div>
-                    <div className='card-about-me-4 card mb-2 border-4 col-md-6'>
-                        <div className='card-body'>
-                            <label for='about_me_name'>Social Media:</label>
-                            <p><i className="bi bi-instagram"></i>/<i class="bi bi-threads"></i> aimansanusi14
-                            <br /><i class="bi bi-tiktok"></i> pell.co
-                            </p>
-                        </div>
-                    </div>
-                    </div>
-
-                    <div className='card-about-me-5 card mb-2 border-4'>
-                        <div className='card-body'>
-                            <label for='about_me_name'>Email:</label>
-                            <p>syafaiman0135@gmail.com</p>
-                        </div>
-                    </div>
-                </div>
+        <div className="row mt-5 align-items-center">
+          {/* Image Column */}
+          <div className="col-lg-5 mb-4 mb-lg-0 fade-in-element">
+            <div className="about-image-wrapper">
+              <img src="/images/owner-img.jpg" alt="Pell Co" className="img-fluid rounded-4" />
+              <div className="image-overlay-glow"></div>
             </div>
-        </section>
-    )
+          </div>
+
+          {/* Details Column */}
+          <div className="col-lg-7">
+            <div className="about-grid">
+              {/* Full Name & Job */}
+              <div className='info-card full-width fade-in-element'>
+                <div className='card-icon'><i className="bi bi-person-vcard"></i></div>
+                <div>
+                  <label>Name & Occupation</label>
+                  <p className="highlight-text">Wan Mohammad Syafrul Aiman | 24</p>
+                  <p className="sub-text">IT Executive @ Opensoft Technologies SDN BHD</p>
+                </div>
+              </div>
+
+              {/* Contact Info Group */}
+              <div className="info-row">
+                <div className='info-card fade-in-element'>
+                  <label><i className="bi bi-telephone-fill me-2"></i>Phone</label>
+                  <p>+6017 289 2440</p>
+                </div>
+                <div className='info-card fade-in-element'>
+                  <label><i className="bi bi-envelope-at-fill me-2"></i>Email</label>
+                  <p>syafaiman0135@gmail.com</p>
+                </div>
+              </div>
+
+              {/* Socials & Project */}
+              <div className="info-row">
+                <div className='info-card fade-in-element'>
+                  <label>Social Media</label>
+                  <div className="social-links">
+                    <span><i className="bi bi-instagram"></i> aimansanusi14</span>
+                    <span><i className="bi bi-tiktok"></i> Pell Co</span>
+                  </div>
+                </div>
+                <div className='info-card border-purple fade-in-element'>
+                  <label className="text-purple">Freelance Specialist</label>
+                  <p>Landing Page Expert & Full Stack Solutions</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default AboutMe;

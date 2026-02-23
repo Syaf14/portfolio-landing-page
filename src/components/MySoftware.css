@@ -1,66 +1,83 @@
-.card-body img{
-  transition: all 0.5s ease;
-  cursor: default;
+.my-software-body {
+  background-color: #050505; /* Consistent deep black */
+  padding: 80px 0;
 }
 
-.card-body img:hover{
-  transform: scale(1.15);
+.accent-bar {
+  height: 4px;
+  width: 50px;
+  background: #10b981;
+  margin-top: 10px;
+  border-radius: 2px;
 }
 
-.my-software-body .card-body .software-logo-1{
-  opacity: 0;
-  transform: translateY(50px); /* moves image down initially */
-  transition: opacity 2s ease-out, transform 2s ease-out;
+/* Software Card Styling */
+.software-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: 0; /* For animation */
+  transform: translateY(30px);
 }
 
-.my-software-body .card-body .software-logo-2{
-  opacity: 0;
-  transform: translateY(50px); /* moves image down initially */
-  transition: opacity 3s ease-out, transform 3s ease-out;
-}
-
-.my-software-body .card-body .software-logo-3{
-  opacity: 0;
-  transform: translateY(50px); /* moves image down initially */
-  transition: opacity 4s ease-out, transform 4s ease-out;
-}
-
-.my-software-body .card-body .software-logo-1.show,
-.my-software-body .card-body .software-logo-2.show,
-.my-software-body .card-body .software-logo-3.show{
+.software-card.show {
   opacity: 1;
   transform: translateY(0);
 }
 
-@media (max-width: 768px) {
+.software-card:hover {
+  background: rgba(255, 255, 255, 0.07);
+  transform: scale(1.05);
+}
 
-  .my-software-body {
-    padding-left: 1rem !important;
-    padding-right: 1rem !important;
+/* Specific Glow Effects */
+.glow-emerald:hover {
+  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2);
+  border-color: #10b981;
+}
+
+.glow-purple:hover {
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.2);
+  border-color: #8b5cf6;
+}
+
+/* Image Handling */
+.software-icon-wrapper {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.software-img {
+  max-height: 100%;
+  max-width: 80%;
+  object-fit: contain;
+  filter: grayscale(20%) drop-shadow(0 5px 15px rgba(0,0,0,0.5));
+  transition: 0.3s;
+}
+
+.software-card:hover .software-img {
+  filter: grayscale(0%) drop-shadow(0 0 10px rgba(255,255,255,0.2));
+}
+
+.software-title {
+  color: #cbd5e1;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+/* Mobile responsive grid */
+@media (max-width: 576px) {
+  .software-icon-wrapper {
+    height: 70px;
   }
-
-  /* Keep row horizontal */
-  .my-software-body .row {
-    flex-wrap: nowrap;
-    justify-content: space-between;
+  .software-card {
+    padding: 20px 10px;
   }
-
-  /* Each card shrinks */
-  .my-software-body .card.col-md-3 {
-    width: 32%;
-    padding: 0;
-  }
-
-  /* Reduce title size */
-  .my-software-body h6 {
-    font-size: 0.75rem;
-    padding: 0.5rem !important;
-  }
-
-  /* Smaller images */
-  .software-logo {
-    max-width: 70px;
-    margin: 0 auto;
-  }
-
 }

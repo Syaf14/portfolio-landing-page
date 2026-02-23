@@ -1,142 +1,120 @@
 import './ContactMe.css';
 import emailjs from '@emailjs/browser';
-import { useRef,useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 
 function ContactMe() {
+  const form = useRef();
 
-    const form = useRef();
-    const sendEmail = (e) => {
-        e.preventDefault();
-
-        emailjs.sendForm(
-        'service_czd6b06',
-        'template_94yfh46',
-        form.current,
-        '5W94LOh4GNJnlw1uN'
-        )
-        .then(() => {
-        alert('Email sent successfully!');
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs.sendForm('service_czd6b06', 'template_94yfh46', form.current, '5W94LOh4GNJnlw1uN')
+      .then(() => {
+        alert('Message beamed successfully!');
         form.current.reset();
-        })
-        .catch((error) => {
+      })
+      .catch((error) => {
         console.error(error);
-        alert('Failed to send email');
-        });
-    };
+        alert('Transmission failed. Please try again.');
+      });
+  };
 
-    const sendWhatsApp = () => {
-    const phone = "60172892440"; // guna format international (MY = 60)
-    const message = "Hi, saya berminat dengan servis anda 😊";
-
+  const sendWhatsApp = () => {
+    const phone = "60172892440";
+    const message = "Hi Pell, I'm interested in your development services! 😊";
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
-    };
+  };
 
-    useEffect(() => {
-            const faders = document.querySelectorAll('.contact-me-img');
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('show');
+      });
+    }, { threshold: 0.1 });
 
-            const appearOnScroll = () => {
-                faders.forEach(fader => {
-                    const rect = fader.getBoundingClientRect();
-                    if (rect.top < window.innerHeight - 50) {
-                        fader.classList.add('show');
-                    }
-                });
-            };
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
 
-            window.addEventListener('scroll', appearOnScroll);
-            window.addEventListener('load', appearOnScroll);
-
-            // Cleanup listener when component unmounts
-            return () => {
-                window.removeEventListener('scroll', appearOnScroll);
-                window.removeEventListener('load', appearOnScroll);
-            };
-        }, []);
-    return (
-        <div className='px-5 py-5' id='contact-me'>
-            <div className='row mb-5'>
-                <div className='col-md-6'>
-                    <div className='contact-me-text'>
-                        <h1 className='fw-bolder'>Want to Contact Me?</h1>
-                        <p>Want to get in touch with me. You can contact through email or just whatsapp us below.</p>
-                    </div>
-                </div>
-                <div className='col-md-6 d-flex justify-content-center'>
-                    <div className='contact-me-img'>
-                        <img src="/images/icon_contact_me.png" alt="contact-me" />
-                    </div>
-                </div>
+  return (
+    <section className='contact-section py-5' id='contact-me'>
+      <div className='container'>
+        <div className='row align-items-center mb-5 fade-up'>
+          <div className='col-lg-6'>
+            <div className='contact-header'>
+              <h5 className='text-emerald text-uppercase letter-spacing'>Get In Touch</h5>
+              <h1 className='fw-bold display-4 text-white'>Let’s Build Something <span className='text-purple'>Great.</span></h1>
+              <p className='text-gray'>Have a project in mind or just want to say hi? Feel free to reach out via email or WhatsApp.</p>
             </div>
-            <div className='row'>
-                <div className='col-md-6'>
-                    <div className='d-flex justify-content-center align-items-center'>
-                        <div className='card w-100 border-0'>
-                            <div className='card-title rounded-top-2 mb-0' style={{background:"#070844"}}>
-                                <h4 className='text-center text-white fst-italic'>Email Us<i className="mx-2 bi bi-envelope-paper"></i></h4>
-                            </div>
-                            <div className='card-body rounded-bottom-2' style={{background:"#047aa8"}}>
-                                <form ref={form} onSubmit={sendEmail}>
-                                    <div className='row'>
-                                        <div className='col-md-6'>
-                                            <label className='fw-semibold fst-italic'>Full name :</label>
-                                            <input type="text" name='name' className='form-control' placeholder='Enter your Name' required/>
-                                        </div>
-                                        <div className='col-md-6'>
-                                            <label className='fw-semibold fst-italic'>Email :</label>
-                                            <input type="email" name='email' className='form-control' placeholder='example@gmail.com' required/>
-                                        </div>
-                                    </div>
-                                    <div className='row'>
-                                        <div className='col-md-4'>
-                                            <label className='fw-semibold fst-italic'>Phone No :</label>
-                                            <input type="text" name='phone_no' className='form-control' placeholder='+6012-345 6789' required/>
-                                        </div>
-                                        <div className='col-md-8'>
-                                            <label className='fw-semibold fst-italic'>Email Subject :</label>
-                                            <input type="text" name='subject' className='form-control' placeholder='Enter your Email Subject'/>
-                                        </div>                                
-                                    </div>                            
-                                    <div className='email-context mb-3'>
-                                        <label className='fw-semibold fst-italic'>Email Context :</label>
-                                        <textarea className='form-control' name='message' rows="4" placeholder='Enter your Message' required></textarea>
-                                    </div>
-                                    <div className='d-flex justify-content-end px-3'>
-                                        <button type='submit' className='submit-btn btn-primary'>Submit</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className='col-md-6'>
-                    <div className="d-flex justify-content-center align-items-center">
-                        <div className="card w-75 border-0">
-                            <div className="card-title rounded-top-2 mb-0" style={{background:"#070844"}}>
-                                <h4 className='text-center text-white fst-italic'>Whatsapp<i class="mx-2 bi bi-whatsapp"></i></h4>
-                            </div>
-                            <div className="card-body rounded-bottom-2" style={{background:"#047aa8"}}>
-                                <div>
-                                    <div className="card mb-3">
-                                        <div className="card-body">
-                                            <div className="mb-3">
-                                                <label className='fw-semibold fst-italic'>Phone No :</label>
-                                                <p className='whatsapp-text'>+6017-289 2440</p>                                                
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className='d-flex justify-content-end px-3'>
-                                        <button type='submit' onClick={sendWhatsApp} className='submit-btn btn-primary'>Whatsapp me</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <div className='col-lg-6 d-none d-lg-flex justify-content-center'>
+            <div className='contact-illustration'>
+              <img src="/images/icon_contact_me.png" alt="contact" className='floating-img' />
+              <div className='purple-glow-sphere'></div>
             </div>
- 
+          </div>
         </div>
-    )
+
+        <div className='row g-4'>
+          {/* Email Form */}
+          <div className='col-lg-8 fade-up'>
+            <div className='contact-card glass-card'>
+              <div className='card-top-bar'>
+                <span className='dot red'></span>
+                <span className='dot yellow'></span>
+                <span className='dot green'></span>
+                <span className='ms-3 text-gray fst-italic small'>new_message.exe</span>
+              </div>
+              <form ref={form} onSubmit={sendEmail} className='p-4'>
+                <div className='row g-3'>
+                  <div className='col-md-6'>
+                    <label className='form-label-custom'>Name</label>
+                    <input type="text" name='name' className='input-custom' placeholder='John Doe' required/>
+                  </div>
+                  <div className='col-md-6'>
+                    <label className='form-label-custom'>Email</label>
+                    <input type="email" name='email' className='input-custom' placeholder='john@example.com' required/>
+                  </div>
+                  <div className='col-md-12'>
+                    <label className='form-label-custom'>Subject</label>
+                    <input type="text" name='subject' className='input-custom' placeholder='Project Inquiry' />
+                  </div>
+                  <div className='col-md-12'>
+                    <label className='form-label-custom'>Message</label>
+                    <textarea name='message' rows="4" className='input-custom' placeholder='Tell me about your idea...' required></textarea>
+                  </div>
+                  <div className='col-12 text-end'>
+                    <button type='submit' className='btn-submit-neon'>
+                      Send Message <i className="bi bi-send-fill ms-2"></i>
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          {/* WhatsApp / Quick Links */}
+          <div className='col-lg-4 fade-up'>
+            <div className='contact-card glass-card h-100 d-flex flex-column justify-content-center text-center p-4'>
+              <div className='wa-icon-box mb-4'>
+                <i className="bi bi-whatsapp"></i>
+              </div>
+              <h4 className='text-white fw-bold'>Fast Response?</h4>
+              <p className='text-gray mb-4'>WhatsApp is the quickest way to reach me for urgent matters.</p>
+              <button onClick={sendWhatsApp} className='btn-wa-neon'>
+                Chat on WhatsApp
+              </button>
+              
+              <div className='mt-5 pt-4 border-top border-secondary'>
+                <p className='small text-uppercase text-gray letter-spacing'>Current Location</p>
+                <p className='text-emerald fw-semibold'>Selangor, Malaysia</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default ContactMe;

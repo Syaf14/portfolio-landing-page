@@ -1,12 +1,93 @@
-.footer {
-  background-color: #111;
-  color: white;
-  text-align: center;
-  padding: 20px;
+.footer-cyber {
+  background-color: #050505;
+  padding: 50px 0 20px 0;
+  border-top: 1px solid transparent;
+  /* This creates the thin glowing line at the very top of the footer */
+  border-image: linear-gradient(90deg, transparent, #10b981, #8b5cf6, transparent) 1;
+  position: relative;
 }
 
-@media (max-width: 768px){
-  .footer p{
-    font-size: 0.75rem;
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.footer-logo {
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: white;
+}
+
+.text-emerald {
+  color: #10b981;
+}
+
+.footer-links a {
+  color: #94a3b8;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: #8b5cf6;
+}
+
+.footer-socials a {
+  color: white;
+  font-size: 1.2rem;
+  margin-left: 20px;
+  transition: 0.3s;
+  opacity: 0.7;
+}
+
+.footer-socials a:hover {
+  opacity: 1;
+  color: #10b981;
+  transform: translateY(-3px);
+  display: inline-block;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 20px;
+}
+
+.footer-bottom p {
+  color: #64748b;
+  font-size: 0.85rem;
+  margin-bottom: 0;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-links a {
+    margin: 0;
+  }
+
+  .footer-socials {
+    margin-top: 10px;
+  }
+
+  .footer-socials a {
+    margin: 0 15px;
   }
 }

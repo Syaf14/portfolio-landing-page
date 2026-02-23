@@ -1,117 +1,81 @@
 import React from 'react';
 import './Hero.css';
 import { Typewriter } from "react-simple-typewriter";
-import AnimateName from './AnimateName';
 
 const Hero = () => {
-
-  const scrollToHome = () => {
-    document.getElementById('hero')?.scrollIntoView({ behavior: 'smooth' });
-  };
-  const scrollToAboutMe = () => {
-    document.getElementById('about-me')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const scrollToMySkill = () => {
-    document.getElementById('my-skill')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  const scrollToContact = () => {
-    document.getElementById('contact-me')?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToSection = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    const menu = document.getElementById('navContent');
+    if (menu?.classList.contains('show')) menu.classList.remove('show');
   };
 
   return (
     <section className="hero" id="hero">
-      <div className='d-flex flex-column w-100 h-100'>
-          <div className="navbar-body">
-            <nav className="navbar navbar-expand-lg px-4 px-md-5">
-              <div className="container-fluid">
-                <a className="navbar-brand text-white fw-bold fs-1 fst-italic logo-text" href="#">
-                  Pell.CO
-                </a>
+      <nav className="navbar navbar-expand-lg fixed-top custom-nav">
+        <div className="container">
+          <a className="navbar-brand logo-text" href="#hero">
+            PELL<span className="accent-text">.</span>CO
+          </a>
+          <button className="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+            <span className="navbar-toggler-icon"></span>
+          </button>
 
-                {/* Toggler for mobile */}
-                <button
-                  className="navbar-toggler"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#navbarSupportedContent"
-                  aria-controls="navbarSupportedContent"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation"
-                >
-                  <span className="navbar-toggler-icon"></span>
-                </button>
-
-                {/* Navbar links */}
-                <div className="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-                  <ul className="navbar-nav mb-2 mb-lg-0 text-center text-lg-end">
-                    <li className="nav-item">
-                      <button className="nav-link btn text-white" onclick={scrollToHome}>
-                        Home
-                      </button>
-                    </li>
-                    <li className="nav-item">
-                      <button className="nav-link btn text-white" onClick={scrollToAboutMe}>
-                        About Me
-                      </button>
-                    </li>
-                    <li className="nav-item">
-                      <button className="nav-link btn text-white" onClick={scrollToMySkill}>
-                        My Skill
-                      </button>
-                    </li>
-                    <li className='nav-item'>
-                      <button className='btn-navbar' onClick={scrollToContact}>Hire Me</button>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </nav>
+          <div className="collapse navbar-collapse" id="navContent">
+            <ul className="navbar-nav ms-auto align-items-center">
+              <li className="nav-item"><button className="nav-link-custom" onClick={() => scrollToSection('hero')}>Home</button></li>
+              <li className="nav-item"><button className="nav-link-custom" onClick={() => scrollToSection('about-me')}>About</button></li>
+              <li className="nav-item"><button className="nav-link-custom" onClick={() => scrollToSection('my-skill')}>Skills</button></li>
+              <li className="nav-item ms-lg-3">
+                <button className="btn-hire-neon" onClick={() => scrollToSection('contact-me')}>Hire Me</button>
+              </li>
+            </ul>
           </div>
-          <div className="hero-content container">
-            <div className="row align-items-center w-100 flex-column-reverse flex-md-row">
+        </div>
+      </nav>
 
-              {/* TEXT */}
-              <div className="col-12 col-md-8 text-center text-md-start d-flex flex-column justify-content-center">
-                <h1 className="hero-title">
-                  I’m <AnimateName />,
-                </h1>
-
-                <p className="hero-desc">
-                  <Typewriter
-                    words={[
-                      "Laravel Developer",
-                      "React Developer",
-                      "Full Stack Developer",
-                    ]}
-                    loop={0}               // infinite
-                    cursor
-                    cursorStyle="|"
-                    typeSpeed={70}
-                    deleteSpeed={40}
-                    delaySpeed={1500}
-                  />
-                </p>
-
-                <div className="d-flex justify-content-center justify-content-md-start">
-                  <button className="cta-button" onClick={scrollToAboutMe}>
-                    Get Started
-                  </button>
-                </div>
-              </div>
-
-              {/* IMAGE */}
-              <div className="col-12 col-md-4 hero-img text-center mb-4 mb-md-0">
-                <img
-                  src="/images/image-hero.png"
-                  alt="Hero"
-                  className="img-fluid"
+      <div className="container hero-container d-flex align-items-center justify-content-center">
+        <div className="row w-100 justify-content-center">
+          <div className="col-lg-10 text-center text-lg-start">
+            <div className="badge-emerald mb-3">
+              <span className="pulse-emerald"></span> 
+              <span className="badge-text">Innovating the Web</span>
+            </div>
+            
+            <h1 className="hero-title">
+              I’m <span className="gradient-text">Pell Co.Dev</span>
+            </h1>
+            
+            <div className="typewriter-container">
+              <span className="hero-desc">
+                <Typewriter
+                  words={["Laravel Developer", "React Developer", "UI/UX Enthusiast"]}
+                  loop={0}
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={70}
+                  deleteSpeed={50}
+                  delaySpeed={2000}
                 />
-              </div>
+              </span>
+            </div>
 
+            <p className="hero-subtext mx-auto mx-lg-0 mt-4 mb-5">
+              Transforming complex ideas into <span className="text-emerald">minimalist interfaces</span> with a <span className="text-purple">creative edge</span>. I build high-converting landing pages where clean code meets striking design.
+            </p>
+
+            <div className="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3 mt-5">
+              <button className="btn-emerald" onClick={() => scrollToSection('about-me')}>Explore Projects</button>
+              <button className="btn-outline-purple" onClick={() => scrollToSection('contact-me')}>Get In Touch</button>
             </div>
           </div>
+        </div>
+      </div>
+      
+      {/* Scroll Down Indicator */}
+      <div className="scroll-indicator" onClick={() => scrollToSection('about-me')}>
+        <div className="mouse">
+          <div className="wheel"></div>
+        </div>
       </div>
     </section>
   );

@@ -9,7 +9,7 @@ function AnimateName() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % fonts.length);
-    }, 300);
+    }, 500);
 
     return () => clearInterval(interval);
   }, []);
