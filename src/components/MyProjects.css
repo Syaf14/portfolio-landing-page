@@ -1,0 +1,106 @@
+/* --- New Project Page Styles --- */
+
+.projects-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 100px 20px;
+}
+
+.projects-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--emerald-glow);
+}
+
+.project-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.project-desc {
+  flex-grow: 1; /* Pushes buttons to the bottom if text varies in length */
+  margin-bottom: 1.5rem;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.tech-pill {
+  background: rgba(139, 92, 246, 0.1);
+  color: var(--purple);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.project-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-actions .btn-emerald,
+.project-actions .btn-outline-purple {
+  flex: 1; /* Makes buttons equal width */
+}
+
+.faded-card {
+  opacity: 0.4; /* Makes the entire card look faded */
+  filter: grayscale(80%); /* Removes some of the neon color to make it look inactive */
+  pointer-events: none; /* Prevents clicking on the "Live Demo" or "View Pictures" buttons */
+  user-select: none; /* Prevents text highlighting */
+  transition: opacity 0.3s ease;
+}
+
+/* Optional: Add a subtle hover effect even when faded to show it's still an element */
+.faded-card:hover {
+  opacity: 0.6;
+  transform: translateY(0); /* Overrides the normal card hover lift */
+  border-color: rgba(255, 255, 255, 0.05); /* Prevents the emerald glow on hover */
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-actions {
+    flex-direction: column;
+  }
+}

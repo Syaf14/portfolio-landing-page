@@ -1,0 +1,69 @@
+.gallery-page {
+  align-items: flex-start;
+  padding: 80px 20px;
+  min-height: 100vh;
+}
+
+.gallery-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.gallery-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.back-btn {
+  position: absolute;
+  left: 0;
+  top: 15px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.5rem;
+}
+
+/* Glassmorphism Card for Images */
+.gallery-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--emerald-glow);
+  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.1);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 16/9; /* Keeps all images uniformly sized */
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .gallery-header {
+    margin-top: 2rem;
+  }
+  
+  .back-btn {
+    position: relative;
+    top: 0;
+    margin-bottom: 2rem;
+  }
+}
