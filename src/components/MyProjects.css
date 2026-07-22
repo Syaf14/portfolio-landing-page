@@ -94,6 +94,21 @@
   border-color: rgba(255, 255, 255, 0.05); /* Prevents the emerald glow on hover */
 }
 
+/* Add this to the bottom of MyProjects.css */
+
+.btn-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  filter: grayscale(50%);
+}
+
+/* Prevent the hover animations (lift and glow) on disabled buttons */
+.btn-disabled:hover {
+  transform: none;
+  box-shadow: none;
+  background: var(--emerald); /* Keeps it the original color instead of brightening */
+}
+
 /* Mobile Adjustments */
 @media (max-width: 768px) {
   .projects-grid {

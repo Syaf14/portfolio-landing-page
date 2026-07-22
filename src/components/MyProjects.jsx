@@ -10,7 +10,7 @@ export default function MyProjects() {
       description: "A comprehensive bus booking system with user-friendly interface, real-time seat selection.",
       techStack: ["React", "Express", "MySQL2"],
       galleryRoute: "/projects/booking_bus_system/gallery",
-      liveLink: "#"
+      liveLink: "#" // <-- This will now trigger the "No Live Prod" state
     },
     {
       id: 2,
@@ -35,11 +35,16 @@ export default function MyProjects() {
         {/* Projects Grid */}
         <div className="projects-grid">
           {projects.map((project) => {
-            // Check if the title contains "coming soon" (case-insensitive)
+            // 1. Check for "Coming Soon"
             const isComingSoon = project.title.toLowerCase().includes('coming soon');
+            
+            // 2. Check if there is no valid live link (empty, null, or just a "#" placeholder)
+            const hasNoLiveLink = !project.liveLink || project.liveLink === "#";
+            
+            // 3. The button should be disabled if it's coming soon OR has no live link
+            const isButtonDisabled = isComingSoon || hasNoLiveLink;
 
             return (
-              // Conditionally add the 'faded-card' class
               <div key={project.id} className={`project-card ${isComingSoon ? 'faded-card' : ''}`}>
                 
                 <h2 className="text-emerald project-title">{project.title}</h2>
@@ -54,15 +59,16 @@ export default function MyProjects() {
                 {/* Action Buttons */}
                 <div className="project-actions">
                   <button 
-                    className="btn-emerald" 
+                    // Add a special disabled class if there's no link
+                    className={`btn-emerald ${isButtonDisabled ? 'btn-disabled' : ''}`} 
                     onClick={() => window.open(project.liveLink, '_blank')}
-                    disabled={isComingSoon} // Disables the button functionality if coming soon
+                    disabled={isButtonDisabled} 
                   >
-                    Live Demo
+                    {/* Dynamically change the text based on the link status */}
+                    {hasNoLiveLink ? "No Live Prod" : "Live Demo"}
                   </button>
                   
-                  {/* Disable link pointer events via CSS when faded */}
-                  <Link to={project.galleryRoute} className="btn-outline-purple view-pics-btn">
+                  <Link to={project.galleryRoute} className="btn-outline-purple view-pics-btn text-decoration-none">
                     View Pictures
                   </Link>
                 </div>

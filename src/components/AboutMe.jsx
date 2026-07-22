@@ -29,7 +29,7 @@ function AboutMe() {
           {/* Image Column */}
           <div className="col-lg-5 mb-4 mb-lg-0 fade-in-element">
             <div className="about-image-wrapper">
-              <img src="/images/owner-img.jpg" alt="Pell Co" className="img-fluid rounded-4" />
+              <img src="/images/resume_picture.png" alt="Pell Co" className="img-fluid rounded-4" />
               <div className="image-overlay-glow"></div>
             </div>
           </div>
